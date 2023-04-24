@@ -1,0 +1,31 @@
+crete table dealer(dealer_id number(3),location_id number(4), country_id number(5));
+
+
+crete table product(product_id number(3),product_name char(10),model_id number(4), varient_id number(5));
+
+
+crete table branch(branch_id number(3),branch_name char(10),address varchar(30),country char(10));
+
+
+crete table date_dim(date_id number(3),year number(4),month char(5), quarter number(5), date date);
+
+desc dealer;
+
+alter table dealer and primary key (dealer_id);
+
+alter table product add primary key (paoduct_id);
+
+aller table branch add primary key (bronch_id);
+
+alter table  date_dim add primary key (date_id);
+
+Create table revenue (dealer_id, number (3), product_id number (3), date_id number(3), branch_id number(3), revenue number (10),units_sold number(5));
+
+
+alter table revenue add foreign key (product_id) references product ;
+
+atter table revenue add foreign key(dealer-id) refrences dealer;
+
+alter table revenue add foreign key (date-id) references date_dim;
+
+alter table revenue add foreign Key (branch-id) refrence branch;

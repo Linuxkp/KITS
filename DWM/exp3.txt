@@ -1,0 +1,18 @@
+Create table variant (variant-id varchar(20), variant_name varchar(26), fuel-type varchar(20));
+
+Create table location (location_id varchar(30), region varchar(20));
+
+Create table country (country_id varchar(20), country_name varchar(20));
+
+
+alter tale varient add primary key (variable id);
+
+atter table location add primary rey (location_id);
+
+alter table country add primary key (country_id);
+
+alter table product add foreign key (variant_id) references variant (variant_id);
+
+alter table dealer add foregin key (location_id) references location (location_id);
+
+alter table dealer add foregin key(country_id) references country (country_id);

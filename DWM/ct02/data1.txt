@@ -1,0 +1,5 @@
+this file is example file foe url
+some urls are
+www.google.com
+google.com
+http://www.facebook.com
